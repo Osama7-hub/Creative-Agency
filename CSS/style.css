@@ -1,0 +1,829 @@
+/*
+    Creative Agency
+    Designer Coder: Osama Ahmed
+    MainColor: #6195ff;
+*/
+
+/** Start Global **/
+body { font-family: 'Montserrat', sans-serif; overflow: hidden; }
+
+.upper { text-transform: uppercase }
+
+.head-border:after
+{
+    content: '';
+    display: block;
+    width: 65px;
+    height: 4px;
+    background-color: #6195ff;
+    margin: 20px auto;
+}
+
+
+/** End Global **/
+
+/* Start Loading */
+.loading-overlay
+{
+    background-color: #6195ff;
+    color: #FFF;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 99999;
+}
+
+.loading-overlay p 
+{
+ 
+  position: absolute;
+  bottom: 20px; right: 20px;
+  color: #FFF;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: bold
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+    margin: 250px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+  }
+  
+  @-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  }
+  
+  @keyframes sk-rotateplane {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+    } 50% { 
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }
+/* End Loading */
+/******************** Start Header ********************/
+.header
+{
+    background: url('../images/background/background1.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header .overlay
+{
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/******************** Start Navbar ********************/
+.navbar-light { background-color: transparent; border: none }
+
+.scrolled { background-color: #FFF; color: #000; border-bottom: 2px solid #EEE; height: 60px;}
+
+.navbar-light .navbar-brand { color: #FFF; font-size: 30px; font-weight: bold }
+
+.navbar-light .navbar-brand:hover { color: #6195ff }
+
+.navbar-light .navbar-nav .nav-link { color: #FFF; margin-right: 10px; font-weight: bold }
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    color: #FFF;
+    border-bottom: 3px solid #6195ff;
+    border-radius: 4px
+}
+
+.navbar-light .navbar-nav .active > .nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show > .nav-link
+{
+    border-bottom: 3px solid #6195ff;
+    border-radius: 4px;
+    color: #6195ff;
+}
+
+.dropdown .dropdown-item:hover { color: #6195ff; font-weight: bold }
+
+.header .navbar-toggler
+{
+    background-color: #FFF;
+    padding: 8px 10px !important;
+}
+
+@media (max-width: 700px)
+{
+
+.navbar-light { background-color: transparent; border: none }
+
+.scrolled { background-color: #FFF; color: #000; border-bottom: 2px solid #EEE; height: 80px;}
+
+.navbar-light .navbar-brand { color: #FFF; font-size: 30px; font-weight: bold }
+
+.navbar-light .navbar-brand:hover { color: #6195ff }
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-nav .nav-link
+{
+    background-color: rgba(0, 0, 0, .8);
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link:hover
+{
+    background-color: #000;
+    border-radius: 4px;
+    color: #6195ff;
+    border: none;
+}
+
+
+}
+/******************** End Navbar ********************/
+
+.header h1 { color: #FFF; font-size: 64px }
+
+.header p
+{
+    color: #FFF;
+    font-size: 17px;
+    width: 90%;
+    margin: auto;
+}
+
+.header button
+{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 7px 40px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.header .get-started:hover { background-color: #BBB }
+
+.header .lern-more 
+{ 
+    background-color: #6195ff; 
+    color: #FFF;
+    font-weight: bold;
+}
+
+.header .lern-more:hover { background-color: #4066b4 }
+
+@media (max-width: 767px)
+{
+    .header h1 { color: #FFF; font-size: 40px }
+}
+/******************** End Header ********************/
+
+/******************** Start Welcome To Website ********************/
+.about { padding: 100px 0 }
+
+.about .about-box
+{
+    border: 1px solid #EEE;
+    margin-right: 30px;
+    padding: 30px 10px;
+    position: relative;
+}
+
+.about .about-box .over
+{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    display: block;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+}
+
+.about .about-box:hover .over{
+    width: 100%;   
+}
+
+.about h2 { margin-bottom: 100px; font-weight: bold }
+
+.about .about-box .about-cont { position: relative; z-index: 2 }
+
+.about .about-box i { font-size: 36px; color: #6195FF; margin-bottom: 20px }
+
+.about .about-box .about-cont h4 { font-weight: bold }
+
+.about .about-box:hover .about-cont h4 { color: #FFF }
+
+.about .about-box .about-cont p
+{
+    color: #888;
+    line-height: 2;
+    margin: auto;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about .about-box a { text-decoration: none }
+
+@media (max-width: 767px)
+{
+    .about .about-box { margin-bottom: 30px }
+}
+/******************** End Welcome To Website ********************/
+
+/******************** Start Featured Works ********************/
+.featured-works 
+{
+    padding: 100px 0;
+    background-color: #fafafa;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+
+.featured-works h2
+{
+    margin-bottom: 80px;
+    font-weight: bold;
+}
+
+.featured-works .col-work { padding: 20px;}
+
+.featured-works .col-work .overlay-work
+{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: block;
+    opacity: 0;
+    background-color: #000;
+    color: #FFF;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}
+
+.featured-works .col-work:hover .overlay-work
+{
+    opacity: .8;
+}
+.featured-works .col-work .overlay-work h5
+{
+    margin-top: 110px;
+    color: #6195ff;
+    font-size: 18px;
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+}
+
+.featured-works .col-work:hover .overlay-work h5 { transition-delay: .1s; opacity: 1 }
+
+.featured-works .col-work .overlay-work p { font-size: 25px; opacity: 0; }
+
+.featured-works .col-work:hover .overlay-work p { transition-delay: .3s; opacity: 1 }
+
+.featured-works .col-work .overlay-work i 
+{
+    opacity: .5;
+    background-color: #6195ff;
+    width: 40px; height: 40px;
+    line-height: 40px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.featured-works .col-work .overlay-work i:hover { background-color: #4066b4 }
+
+.featured-works .col-work:hover .overlay-work i
+{
+    transition-delay: .5s;
+    opacity: 1;
+}
+/******************** End Featured Works ********************/
+
+/******************** Start What We Offer ********************/
+.we-offer
+{
+    padding: 100px 0;
+}
+
+.we-offer .offer-box
+{
+    border: 1px solid #EEE;
+    margin-right: 30px;
+    padding: 30px 10px;
+    position: relative;
+}
+
+.we-offer .offer-box .over
+{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    display: block;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+}
+
+.we-offer .offer-box:hover .over{
+    width: 100%;   
+}
+
+.we-offer h2
+{
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
+.we-offer .offer-row { margin-bottom: 30px;}
+
+.we-offer .offer-box .offer-cont
+{
+    padding-left: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.we-offer .offer-box i
+{
+    font-size: 36px;
+    color: #6195FF;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.we-offer .offer-box .offer-cont h4 { font-weight: bold }
+
+.we-offer .offer-box:hover .offer-cont h4 { color: #FFF }
+
+.we-offer .offer-box .offer-cont p
+{
+    color: #888;
+    line-height: 1.8;    
+    margin: 10px 0;
+    padding-left: 25px;
+}
+
+@media (max-width: 767px)
+{
+    .we-offer .offer-box { margin-bottom: 30px }
+}
+/******************** End What We Offer ********************/
+
+/******************** Start Why Choose Us ********************/
+.choose-us { padding: 80px 0 120px;}
+
+
+.choose-us h2:after
+{
+    content: '';
+    display: block;
+    width: 50px; height: 4px;
+    background-color: #6195ff;
+    margin: 20px 0;
+}
+
+.choose-us p { color: #888; line-height: 1.8 }
+
+.choose-us p i
+{
+    width: 30px; height: 30px;
+    border: 1px solid #6195ff;
+    color: #6195ff;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.choose-us .carousel-indicators li
+{
+    height: 8px !important;
+    border-radius: 10px !important;
+}
+
+.choose-us .carousel-indicators .active
+{
+    background-color: #6195ff;
+    height: 8px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 60px 30px #6195ff;
+}
+
+@media (max-width: 767px)
+{
+    .choose-us .choose-box { margin-bottom: 30px }
+}
+/******************** End Why Choose Us ********************/
+
+/******************** Start Services ********************/
+.services
+{
+    background: url('../images/background/background2.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.services .overlay
+{
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    color: #FFF;
+    padding: 60px 0;
+}
+
+.services i
+{
+    font-size: 50px;
+    color: #6195ff;
+}
+
+.services h3
+{
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 767px)
+{
+    .services .services-box { margin-bottom: 30px }
+}
+/******************** End Services ********************/
+
+/******************** Start Pricing Table ********************/
+.pricing-table { padding: 100px 0 }
+
+.pricing-table .pricing-box
+{
+    border: 1px solid #EEE;
+    margin-right: 30px;
+    padding: 30px 10px;
+    position: relative;
+}
+
+.pricing-table .pricing-box .over
+{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: block;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+}
+
+.pricing-table .pricing-box:hover .over { height: 100% }
+
+.pricing-table h2 { margin-bottom: 100px; font-weight: bold }
+
+.pricing-table .pricing-box .pricing-cont { position: relative; z-index: 2 }
+
+.pricing-table .pricing-box .pricing-cont h5 { font-weight: bold; margin-bottom: 20px;}
+
+.pricing-table .pricing-box:hover .pricing-cont h5 { color: #6195ff }
+
+.pricing-table .pricing-box .pricing-cont .price
+{
+    width: 130px; height: 130px;
+    margin: 20px auto;
+    border: 2px solid #6195ff;
+    border-radius: 50%;
+    display: block;
+}
+
+.pricing-table .pricing-box .pricing-cont .price h3 { font-size: 55px; font-weight: bold; margin: 20px auto 0 }
+
+.pricing-table .pricing-box .pricing-cont .price .month { margin: 0; font-size: 18px; font-weight: bold }
+
+.pricing-table .pricing-box:hover .pricing-cont .price h3,
+.pricing-table .pricing-box:hover .pricing-cont .price .month { color: #FFF }
+
+.pricing-table .pricing-box .pricing-cont ul li { line-height: 2; color: #888; font-size: 18px }
+
+.pricing-table .pricing-box .pricing-cont button
+{
+    background: transparent;
+    border: 2px solid #6195ff;
+    color: #6195ff;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+.pricing-table .pricing-box .pricing-cont button:hover
+{
+    background-color: #6195ff;
+    border: 2px solid #6195ff;
+    color: #FFF;
+}
+
+@media (max-width: 767px)
+{
+    .pricing-table .pricing-box { margin-bottom: 30px }
+}
+/******************** End Pricing Table ********************/
+
+/******************** Start Testimonial ********************/
+.testimonial
+{
+    background: url('../images/background/background3.jpg') fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+.testimonial .overlay{
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%; height: 100%;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.testimonial img
+{
+    display: block;
+    margin: 0px auto 20px;
+    border-radius: 50%;
+}
+
+.testimonial h2{
+    font-size: 40px;
+    font-weight: normal;
+    padding: 10px 0 00px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.testimonial q{
+    font-size: 20px;
+    line-height: 2;
+    color: #999;
+}
+
+.testimonial p{
+    font-family: cursive;
+    font-size: 30px;
+    color: #6195ff;
+}
+
+.testimonial .slider > div {display: none}
+
+.testimonial .slider .active {display: block}
+
+@media (max-width: 767px)
+{
+    .testimonial { height: 500px }
+}
+/******************** End Testimonial ********************/
+
+/******************** Start Our Team ********************/
+.our-team { padding: 100px 0 }
+
+.our-team .pricing-box
+{
+    border: 1px solid #EEE;
+    margin-right: 30px;
+    padding: 40px;
+    position: relative;
+}
+
+.our-team .pricing-box .over
+{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    display: block;
+    transition: all .2s ease-in-out;
+    z-index: 1;
+}
+
+.our-team .pricing-box:hover .over { height: 100% }
+
+.our-team h2 { margin-bottom: 100px; font-weight: bold }
+
+.our-team .pricing-box .pricing-cont { position: relative; z-index: 2 }
+
+.our-team .pricing-box .pricing-cont h3 { margin-top: 20px }
+
+.our-team .pricing-box:hover .pricing-cont h3 { color: #FFF }
+
+.our-team .pricing-box .pricing-cont p { color: #888 }
+
+.our-team .pricing-box:hover .pricing-cont p { color: #6195ff }
+
+.our-team .pricing-box .pricing-cont i
+{
+    position: absolute;
+    width: 50px; height: 50px;
+    line-height: 50px;
+    background-color: #6195ff;
+    color: #FFF;
+    opacity: 0;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.our-team .pricing-box .pricing-cont a:hover i { background-color: #4066b4 }
+
+.our-team .pricing-box .pricing-cont a:first-of-type i
+{
+    top: 0; right: 0;
+}
+
+.our-team .pricing-box .pricing-cont a:nth-of-type(2) i
+{
+    top: 50px; right: 0;
+}
+
+.our-team .pricing-box .pricing-cont a:last-of-type i
+{
+    top: 100px; right: 0;
+}
+
+.our-team .pricing-box:hover .pricing-cont i { opacity: 1 }
+/******************** End Our Team ********************/
+
+/******************** Start Recents News ********************/
+.recents-news
+{
+    padding: 80px 0; 
+    background-color: #fafafa; 
+    border-bottom: 1px solid #EEE;
+    border-top: 1px solid #EEE;;
+}
+
+.recents-news h2 { margin-bottom: 100px; font-weight: bold }
+
+.card .card-body .card-span {
+    margin-right: 10px;
+    color: #888;
+}
+
+.card .card-body .card-span i
+{
+    color: #6195ff;
+}
+
+.card .card-body .card-title { margin: 20px 0;}
+
+.card .card-body .card-text
+{
+    color: #888;
+}
+
+.card .card-body .card-link { text-decoration: none;}
+
+@media (max-width: 767px)
+{
+    .card  { width: 100%; margin: 0 auto 20px;}
+}
+/******************** End Recents News ********************/
+
+/******************** Start Get In Touch ********************/
+.contact { padding: 100px 0 }
+
+.contact h2 { margin-bottom: 100px; font-weight: bold }
+
+.contact i { font-size: 40px; color: #6195ff }
+
+.contact h3 { font-size: 25px; font-weight: bold; margin-top: 15px }
+
+.contact p { color: #888; font-size: 18px }
+
+.contact form { margin: 40px auto; width: 70% }
+
+.contact form input
+{
+    display: block;
+    margin: auto;
+    background-color: #f6f3f3;
+    border: none;
+    padding: 10px; 
+    transition: all .5s ease-in-out;   
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder { color: #AAA; font-family: cursive }
+
+.contact form input:focus,
+.contact form textarea:focus 
+{
+    -webkit-box-shadow: 10px 10px 20px #CCC;
+    -moz-box-shadow: 10px 10px 20px #CCC;
+    -o-box-shadow: 10px 10px 20px #CCC;
+    box-shadow: 10px 10px 20px #CCC;
+    border: none;
+    border-left: 5px solid rgba(97, 149, 255, .3);
+    border-right: 5px solid rgba(97, 149, 255, .3);
+    border-radius: 5px;
+}
+
+.contact form textarea
+{
+    background-color: #f6f3f3;
+    border: none;
+    padding: 15px;
+    height: 150px;
+    resize: none;
+}
+
+.contact form button { padding: 10px 60px; font-size: 20px; margin-top: 30px }
+/******************** End Get In Touch ********************/
+
+/******************** Start Footer ********************/
+.footer
+{
+    background-color: #222;
+    padding: 40px 0;
+}
+
+.footer img {display: block; margin: 0 auto 20px;}
+
+.footer a:hover i
+{
+    background-color: #4066b4;
+}
+.footer i
+{
+    display: inline-block;
+    width: 55px; height: 55px;
+    line-height: 55px;
+    background-color: #6195ff;
+    color: #FFF;
+    margin: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.footer p { color: #888; font-size: 20px; margin-top: 100px }
+
+.footer p span { color: #6195ff }
+
+@media (max-width: 767px)
+{
+    .footer i { margin-bottom: 20px }
+}
+/******************** End Footer ********************/
+
+/******************** Start Scroll Top ********************/
+.scroll-top
+{
+    width: 45px;
+    height: 45px;
+    color: #FFF;
+    background-color: #6195ff;
+    text-align: center;
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 9999;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    display: none;
+}
+
+.scroll-top:hover { background-color: #4066b4; color: #FFF }
+
+.scroll-top i { font-size: 35px;line-height: 45px; }
+/******************** Start Scroll Top ********************/
